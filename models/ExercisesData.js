@@ -5,44 +5,29 @@ class ExercisesData extends Model {}
 
 ExercisesData.init(
   {
-    id: {
+    exercise_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: false,
     },
-    first_name: {
+    muscle_group: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    last_name: {
+    exercise_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
-      },
+    description: {
+      type: DataTypes.TEXT,
+      allowNull: true,
     },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [6],
-      },
-    },
-    weight: {
+    duration: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    height: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    age: {
+    rest_time: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
